@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "953935154319",
+    "project_id": "sportdb-ngp",
+    "storage_bucket": "sportdb-ngp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953935154319:android:0cdb722dddf69b8a8db4fa",
+        "android_client_info": {
+          "package_name": "com.example.hsports"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953935154319-opku00hsljappd5mlfuc72d151ga8ob1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrOKaFyTuXgP0MvI6awD-E8YXELa2QO9g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953935154319-opku00hsljappd5mlfuc72d151ga8ob1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

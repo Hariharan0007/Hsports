@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Hsports</string>
+
+    <string-array name="position">
+        <item>Admin</item>
+        <item>Call Room</item>
+        <item>Referee</item>
+        <item>Data Entry</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="event_type">
+        <item>Track</item>
+        <item>Jump</item>
+        <item>Throw</item>
+    </string-array>
+
+    <string-array name="event_track">
+        <item>100 mtr</item>
+        <item>400 mtr</item>
+        <item>1500 mtr</item>
+        <item>Hurdles</item>
+    </string-array>
+
+    <string-array name="event_jump">
+        <item>Long Jump</item>
+        <item>High Jump</item>
+        <item>Triple Jump</item>
+        <item>Pole Vault</item>
+    </string-array>
+
+    <string-array name="event_throw">
+        <item>Shot-put</item>
+        <item>Discus Throw</item>
+        <item>Hammer Throw</item>
+        <item>Javelin Throw</item>
+    </string-array>
+
+</resources>

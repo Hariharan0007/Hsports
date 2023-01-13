@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/background"
+    android:weightSum="6"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        >
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center"
+            android:background="@drawable/hsports"
+            >
+        </ImageView>
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:weightSum="2"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="1"
+            android:layout_marginTop="20dp"
+            >
+
+            <Button
+                android:id="@+id/create"
+                android:layout_width="226dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/btn_blue"
+                android:text="Create"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_regular"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
+
+            </Button>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="1"
+            android:layout_marginTop="20dp"
+            >
+
+            <Button
+                android:id="@+id/join"
+                android:layout_width="226dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/btn_blue"
+                android:text="Join"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_regular"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
+
+            </Button>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
