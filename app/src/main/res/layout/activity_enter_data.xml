@@ -199,12 +199,12 @@
             <Button
                 android:id="@+id/new_event_next"
                 android:layout_width="126dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:elevation="20dp"
                 android:backgroundTint="@color/btn_blue"
                 android:text="Next"
-                android:textSize="10dp"
+                android:textSize="15dp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/montserrat_regular"
                 app:cornerRadius="71dp"
@@ -220,4 +220,4 @@
 
 
 
-</LinearLayout>
+
