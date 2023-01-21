@@ -1,0 +1,2 @@
+# Sports Meet Management System
+An Android application for managing sports meets. It is a simple application which can be used to manage sports meets. It can be used to manage the events, participants, judges, and results of the sports meet. It can also be used to generate the results of the sports meet.
