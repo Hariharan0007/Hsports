@@ -15,44 +15,8 @@
         tools:context=".DataEntry"
         android:background="@drawable/background"
         >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            >
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/hsports"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp">
-            </ImageView>
-        </LinearLayout>
 
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="30sp"
-                android:text="Data Entry"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:fontFamily="@font/montserrat_regular"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                >
-
-            </TextView>
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

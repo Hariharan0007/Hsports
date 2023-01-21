@@ -6,29 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@drawable/background"
+    android:background="@drawable/main_bg"
     android:weightSum="6"
     >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_margin="10dp"
-        >
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="66dp"
-            android:layout_gravity="center"
-            android:background="@drawable/hsports"
-            >
-        </ImageView>
-    </LinearLayout>
-
-
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,31 +17,32 @@
         android:weightSum="2"
         android:orientation="vertical"
         >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="200dp"
             android:layout_weight="1"
-            android:orientation="vertical"
             android:gravity="center"
-            android:weightSum="1"
-            android:layout_marginTop="20dp"
-            >
+            android:orientation="vertical"
+            android:weightSum="1">
 
             <Button
                 android:id="@+id/create"
-                android:layout_width="226dp"
-                android:layout_height="160dp"
+                android:elevation="10dp"
+                android:stateListAnimator="@null"
+                android:layout_width="248dp"
+                android:layout_height="63dp"
                 android:layout_gravity="center"
-                android:backgroundTint="@color/btn_blue"
-                android:text="Create"
-                android:textColor="@color/black"
+                android:backgroundTint="@color/btn_green"
                 android:fontFamily="@font/montserrat_regular"
-                app:cornerRadius="20dp"
-                app:strokeColor="@color/black"
+                android:text="Create Event"
+                android:textColor="@color/black"
+                app:cornerRadius="31dp"
+                app:strokeColor="@color/btn_green"
                 app:strokeWidth="1dp">
 
             </Button>
-
 
 
         </LinearLayout>
@@ -69,28 +50,28 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="-50dp"
             android:layout_weight="1"
-            android:orientation="vertical"
             android:gravity="center"
-            android:weightSum="1"
-            android:layout_marginTop="20dp"
-            >
+            android:orientation="vertical"
+            android:weightSum="1">
 
             <Button
                 android:id="@+id/join"
-                android:layout_width="226dp"
-                android:layout_height="160dp"
+                android:elevation="10dp"
+                android:stateListAnimator="@null"
+                android:layout_width="248dp"
+                android:layout_height="63dp"
                 android:layout_gravity="center"
-                android:backgroundTint="@color/btn_blue"
-                android:text="Join"
-                android:textColor="@color/black"
+                android:backgroundTint="@color/btn_green"
                 android:fontFamily="@font/montserrat_regular"
-                app:cornerRadius="20dp"
-                app:strokeColor="@color/black"
+                android:text="Join Event"
+                android:textColor="@color/black"
+                app:cornerRadius="31dp"
+                app:strokeColor="@color/btn_green"
                 app:strokeWidth="1dp">
 
             </Button>
-
 
 
         </LinearLayout>
