@@ -22,8 +22,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="330dp"
-            android:layout_height="50dp"
+            android:layout_width="310dp"
+            android:layout_height="55dp"
             android:hint="Name"
             android:enabled="true"
             android:textColorHint="@color/black"
@@ -66,8 +66,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="330dp"
-            android:layout_height="50dp"
+            android:layout_width="310dp"
+            android:layout_height="55dp"
             android:hint="Organisation"
             android:enabled="true"
             android:textColorHint="@color/black"
@@ -110,8 +110,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="330dp"
-            android:layout_height="50dp"
+            android:layout_width="310dp"
+            android:layout_height="55dp"
             android:hint="Event name"
             android:enabled="true"
             android:textColorHint="@color/black"
@@ -153,8 +153,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="330dp"
-            android:layout_height="50dp"
+            android:layout_width="310dp"
+            android:layout_height="55dp"
             android:hint="Event Date"
             android:enabled="true"
             android:textColorHint="@color/black"
