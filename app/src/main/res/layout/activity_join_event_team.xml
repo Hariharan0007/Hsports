@@ -43,7 +43,7 @@
         >
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/join_event_organisation_layout" style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-            android:layout_width="330dp"
+            android:layout_width="310dp"
             android:layout_height="50dp"
             android:elevation="2dp"
             android:background="@drawable/spinner_dropdown"
@@ -95,7 +95,7 @@
         >
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/join_event_organizer_layout" style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-            android:layout_width="330dp"
+            android:layout_width="310dp"
             android:layout_height="50dp"
             android:elevation="2dp"
             android:background="@drawable/spinner_dropdown"
@@ -148,7 +148,7 @@
         >
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-            android:layout_width="330dp"
+            android:layout_width="310dp"
             android:layout_height="50dp"
             android:elevation="2dp"
             android:background="@drawable/spinner_dropdown"
@@ -200,7 +200,7 @@
         >
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-            android:layout_width="330dp"
+            android:layout_width="310dp"
             android:layout_height="50dp"
             android:elevation="2dp"
             android:background="@drawable/spinner_dropdown"
@@ -255,8 +255,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="330dp"
-            android:layout_height="50dp"
+            android:layout_width="310dp"
+            android:layout_height="55dp"
             android:hint="Name"
             android:enabled="true"
             android:textColorHint="@color/black"
@@ -272,7 +272,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/join_p_name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:drawableStart="@drawable/ic_baseline_person_24"
                 android:drawablePadding="20dp"
                 android:elevation="2dp"
@@ -300,8 +300,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="330dp"
-            android:layout_height="50dp"
+            android:layout_width="310dp"
+            android:layout_height="55dp"
             android:hint="Join code"
             android:enabled="true"
             android:textColorHint="@color/black"
@@ -346,8 +346,8 @@
 
             <Button
                 android:id="@+id/join_event_team_btn"
-                android:layout_width="84dp"
-                android:layout_height="40dp"
+                android:layout_width="126dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:elevation="5dp"
                 android:backgroundTint="@color/white"
