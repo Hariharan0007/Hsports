@@ -84,6 +84,22 @@
                 android:gravity="center">
             </TextView>
         </androidx.cardview.widget.CardView>
+        <ScrollView
+            android:id="@+id/activity_admin_call_room_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activity_admin_call_room_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/card_view_" />
+
+        </ScrollView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/activity_admin_referee"
@@ -103,6 +119,22 @@
                 android:gravity="center">
             </TextView>
         </androidx.cardview.widget.CardView>
+        <ScrollView
+            android:id="@+id/activity_admin_referee_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activity_admin_referee_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/card_view_" />
+
+        </ScrollView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/activity_admin_data_entry"
@@ -121,6 +153,22 @@
                 android:gravity="center">
             </TextView>
         </androidx.cardview.widget.CardView>
+        <ScrollView
+            android:id="@+id/activity_admin_data_entry_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activity_admin_data_entry_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/card_view_" />
+
+        </ScrollView>
 
     </LinearLayout>
 
