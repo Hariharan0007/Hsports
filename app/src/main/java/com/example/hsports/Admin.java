@@ -1,5 +1,6 @@
 package com.example.hsports;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,9 +8,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -50,16 +55,72 @@ public class Admin extends AppCompatActivity {
         refereeRecyclerView.setAdapter(refereeAdapter);
         dataEntryRecyclerView.setAdapter(dataEntryAdapter);
 
-        refereeList.add(new ViewModel("Referee 1"));
-        refereeList.add(new ViewModel("Referee 2"));
-        refereeList.add(new ViewModel("Referee 3"));
+        callRoomRecyclerView.setVisibility(View.GONE);
+        refereeRecyclerView.setVisibility(View.GONE);
+        dataEntryRecyclerView.setVisibility(View.GONE);
 
-        callRoomList.add(new ViewModel("Call Room 1"));
-        callRoomList.add(new ViewModel("Call Room 2"));
-        callRoomList.add(new ViewModel("Call Room 3"));
+        callRoom.setOnClickListener(v -> switchVisibility(callRoomRecyclerView));
+        referee.setOnClickListener(v -> switchVisibility(refereeRecyclerView));
+        dataEntry.setOnClickListener(v -> switchVisibility(dataEntryRecyclerView));
 
-        dataEntryList.add(new ViewModel("Data Entry 1"));
-        dataEntryList.add(new ViewModel("Data Entry 2"));
-        dataEntryList.add(new ViewModel("Data Entry 3"));
+        DatabaseReference refereeReference = database.child(org).child(organizer).child(event).child("EVENT TEAM").child("REFEREE");
+        DatabaseReference callRoomReference = database.child(org).child(organizer).child(event).child("EVENT TEAM").child("CALL ROOM");
+        DatabaseReference dataEntryReference = database.child(org).child(organizer).child(event).child("EVENT TEAM").child("DATA ENTRY");
+
+        refereeReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                refereeList.clear();
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    refereeList.add(new ViewModel(dataSnapshot.getKey()));
+                }
+                refereeAdapter.setItems(refereeList);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        callRoomReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                callRoomList.clear();
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    callRoomList.add(new ViewModel(dataSnapshot.getKey()));
+                }
+                callRoomAdapter.setItems(callRoomList);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        dataEntryReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                dataEntryList.clear();
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    dataEntryList.add(new ViewModel(dataSnapshot.getKey()));
+                }
+                dataEntryAdapter.setItems(dataEntryList);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+    private void switchVisibility(RecyclerView recyclerView) {
+        if (recyclerView.getVisibility() == View.VISIBLE) {
+            recyclerView.setVisibility(View.GONE);
+        } else {
+            recyclerView.setVisibility(View.VISIBLE);
+        }
     }
 }

@@ -19,13 +19,17 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewHolder> {
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view_, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.name.setText(list.get(position).name);
+    }
+
+    public void setItems(ArrayList<ViewModel> list) {
+        this.list = list;
     }
 
     @Override
@@ -38,7 +42,7 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewHolder> {
 
         public ViewHolder(View view) {
             super(view);
-            name = view.findViewById(R.id.referee_card_view_name);
+            name = view.findViewById(R.id.card_view_name);
         }
     }
 }
