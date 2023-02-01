@@ -3,6 +3,7 @@ package com.example.hsports;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class card_view {
     private String person_name;
 

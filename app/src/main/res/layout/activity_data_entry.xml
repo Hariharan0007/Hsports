@@ -13,24 +13,38 @@
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".DataEntry"
-        android:background="@drawable/background"
+        android:background="@drawable/enter_data_bg"
         >
 
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_height="20dp"
+            android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center"
+            android:weightSum="1"
+            android:layout_marginTop="1dp"
             >
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
                 android:id="@+id/data_entry_event_type_layout"
-                android:layout_width="250dp"
-                android:layout_height="60dp"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                android:elevation="2dp"
+                android:background="@drawable/spinner_dropdown"
+                app:boxBackgroundColor="@color/light_white"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:startIconDrawable="@drawable/ic_baseline_groups_24"
+                app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+                app:endIconTint="@color/black"
                 android:hint="Event Type"
                 android:enabled="true"
                 android:textColorHint="@color/black"
