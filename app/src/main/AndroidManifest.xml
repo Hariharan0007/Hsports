@@ -91,9 +91,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".CallRoomActivity"/>
-        <activity android:name=".DataEntryActivity"/>
-        <activity android:name=".RefereeActivity"/>
     </application>
 
 </manifest>
