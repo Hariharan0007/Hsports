@@ -8,15 +8,13 @@
     android:orientation="vertical"
     tools:context=".Admin"
     android:background="@drawable/background"
-    android:weightSum="9"
+
     >
     <LinearLayout
         android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:layout_weight="1"
-        android:layout_gravity="center"
-        android:gravity="center"
+
         >
         <ImageView
             android:layout_width="300dp"
@@ -38,7 +36,6 @@
             android:textSize="30sp"
             android:textColor="@color/black"
             android:fontFamily="@font/montserrat_regular"
-            android:layout_gravity="center"
             android:gravity="center"
             >
         </TextView>
@@ -61,11 +58,16 @@
 
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:orientation="vertical">
+
+
         <androidx.cardview.widget.CardView
             android:id="@+id/activity_admin_call_room"
             android:layout_width="match_parent"
@@ -84,6 +86,17 @@
                 android:gravity="center">
             </TextView>
         </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activity_admin_call_room_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/card_view_" />
+
+
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/activity_admin_referee"
@@ -104,6 +117,17 @@
             </TextView>
         </androidx.cardview.widget.CardView>
 
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activity_admin_referee_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/card_view_" />
+
+
+
+
+
         <androidx.cardview.widget.CardView
             android:id="@+id/activity_admin_data_entry"
             android:layout_width="match_parent"
@@ -122,7 +146,17 @@
             </TextView>
         </androidx.cardview.widget.CardView>
 
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activity_admin_data_entry_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/card_view_" />
+
+
+
     </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
 
