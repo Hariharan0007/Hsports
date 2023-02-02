@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.google.firebase.database.DataSnapshot;
@@ -78,7 +79,7 @@ public class Admin extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Log.e("Admin", "onCancelled: " + error.getMessage());
             }
         });
 
@@ -94,7 +95,7 @@ public class Admin extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Log.e("Admin", "onCancelled: " + error.getMessage());
             }
         });
 
@@ -110,7 +111,7 @@ public class Admin extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Log.e("Admin", "onCancelled: " + error.getMessage());
             }
         });
     }

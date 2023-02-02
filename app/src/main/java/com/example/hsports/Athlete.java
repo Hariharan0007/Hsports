@@ -1,13 +1,13 @@
 package com.example.hsports;
 
 public class Athlete {
-    String player_name;
-    String chest_number;
+    String playerName;
+    String chestNumber;
     String dob;
 
-    public Athlete(String player_name, String chest_number, String dob) {
-        this.player_name = player_name;
-        this.chest_number = chest_number;
+    public Athlete(String playerName, String chest_number, String dob) {
+        this.playerName = playerName;
+        this.chestNumber = chest_number;
         this.dob = dob;
     }
 }
