@@ -50,7 +50,7 @@ public class ScoreActivity extends AppCompatActivity {
         ArrayList<String> athleteList = new ArrayList<>();
 
         DatabaseReference gameReference = database.child(org).child(organizer).child(event).child("EVENT LIST").child(gender).child(category).child(game);
-
+        DatabaseReference scoreReference = database.child(org).child(organizer).child(event).child("SCORES").child(gender).child(category).child(game);
         Task<DataSnapshot> task = gameReference.get();
 
         task.addOnCompleteListener(task1 -> {
@@ -76,7 +76,7 @@ public class ScoreActivity extends AppCompatActivity {
                 HashMap<String, Object> scoreMap = new HashMap<>();
                 scoreMap.put(String.valueOf(roundNo[0]), scoreText);
 
-                gameReference.child(chestNoText).updateChildren(scoreMap);
+                scoreReference.child(chestNoText).updateChildren(scoreMap);
 
                 if (athleteNo[0] < athleteList.size() - 1) {
                     athleteNo[0]++;
