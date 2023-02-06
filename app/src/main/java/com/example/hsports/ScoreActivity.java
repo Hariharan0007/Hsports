@@ -35,6 +35,10 @@ public class ScoreActivity extends AppCompatActivity {
         String category = getIntent().getStringExtra("category");
         String game = getIntent().getStringExtra("game");
 
+        TextView gameName = findViewById(R.id.activity_score_game_name);
+        gameName.setText(game);
+        TextView totalAthletes = findViewById(R.id.activity_score_total_athletes);
+        TextView totalRoundsTextView = findViewById(R.id.activity_score_total_rounds);
         TextView round = findViewById(R.id.activity_score_round);
         TextView chestNo = findViewById(R.id.score_card_view_chest_no);
         TextView score = findViewById(R.id.score_card_view_score);
@@ -46,6 +50,7 @@ public class ScoreActivity extends AppCompatActivity {
 
         int totalRounds = 3;
         round.setText("Round 1");
+        totalRoundsTextView.setText("Total Rounds: " + totalRounds);
 
         ArrayList<String> athleteList = new ArrayList<>();
 
@@ -60,6 +65,7 @@ public class ScoreActivity extends AppCompatActivity {
                     athleteList.add(athlete.getKey());
                 }
                 chestNo.setText(athleteList.get(0));
+                totalAthletes.setText("Total Athletes: " + athleteList.size());
             } else {
                 Log.e("ScoreActivity", "Error getting data", task1.getException());
             }
