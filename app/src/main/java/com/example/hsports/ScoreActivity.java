@@ -47,6 +47,7 @@ public class ScoreActivity extends AppCompatActivity {
         Button submitButton = findViewById(R.id.activity_score_submit);
 
         submitButton.setVisibility(Button.INVISIBLE);
+        backButton.setVisibility(Button.INVISIBLE);
 
         int totalRounds = 3;
         round.setText("Round 1");
@@ -65,6 +66,23 @@ public class ScoreActivity extends AppCompatActivity {
                     athleteList.add(athlete.getKey());
                 }
                 chestNo.setText(athleteList.get(0));
+                scoreReference.child(athleteList.get(0)).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.exists()) {
+                            String scoreText = snapshot.child("1").getValue(String.class);
+                            score.setText(scoreText);
+                        } else {
+                            score.setText("");
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Log.e("ScoreActivity", "Error getting data", error.toException());
+                    }
+                });
+
                 totalAthletes.setText("Total Athletes: " + athleteList.size());
             } else {
                 Log.e("ScoreActivity", "Error getting data", task1.getException());
@@ -75,6 +93,8 @@ public class ScoreActivity extends AppCompatActivity {
         final int[] athleteNo = {0};
 
         saveAndNextButton.setOnClickListener(v -> {
+            backButton.setVisibility(Button.VISIBLE);
+
             if (roundNo[0] <= totalRounds) {
                 String chestNoText = chestNo.getText().toString();
                 String scoreText = score.getText().toString();
@@ -100,7 +120,27 @@ public class ScoreActivity extends AppCompatActivity {
                 }
             }
 
-            score.setText("");
+            if(roundNo[0] == totalRounds && athleteNo[0] == athleteList.size() - 1) {
+                saveAndNextButton.setVisibility(Button.INVISIBLE);
+                submitButton.setVisibility(Button.VISIBLE);
+            }
+
+            scoreReference.child(chestNo.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (snapshot.exists()) {
+                        String scoreText = snapshot.child(String.valueOf(roundNo[0])).getValue(String.class);
+                        score.setText(scoreText);
+                    } else {
+                        score.setText("");
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    Log.e("ScoreActivity", "Error getting data", error.toException());
+                }
+            });
         });
 
         submitButton.setOnClickListener(v -> {
@@ -112,6 +152,46 @@ public class ScoreActivity extends AppCompatActivity {
             intent.putExtra("category", category);
             intent.putExtra("game", game);
             startActivity(intent);
+        });
+
+        backButton.setOnClickListener(v -> {
+            saveAndNextButton.setVisibility(Button.VISIBLE);
+            submitButton.setVisibility(Button.INVISIBLE);
+
+            if(roundNo[0] >= 0) {
+                if (athleteNo[0] > 0) {
+                    athleteNo[0]--;
+                    chestNo.setText(athleteList.get(athleteNo[0]));
+                } else {
+                    if (roundNo[0] > 1) {
+                        roundNo[0]--;
+                        round.setText("Round " + roundNo[0]);
+                        athleteNo[0] = athleteList.size() - 1;
+                        chestNo.setText(athleteList.get(athleteNo[0]));
+                    }
+                }
+            }
+
+            if(roundNo[0] == 1 && athleteNo[0] == 0) {
+                backButton.setVisibility(Button.INVISIBLE);
+            }
+
+            scoreReference.child(chestNo.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (snapshot.exists()) {
+                        String scoreText = snapshot.child(String.valueOf(roundNo[0])).getValue(String.class);
+                        score.setText(scoreText);
+                    } else {
+                        score.setText("");
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    Log.e("ScoreActivity", "Error getting data", error.toException());
+                }
+            });
         });
     }
 }
