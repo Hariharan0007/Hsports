@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -25,13 +21,13 @@
             android:orientation="vertical"
             android:gravity="center"
             android:weightSum="1"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="120dp"
             >
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
                 android:id="@+id/data_entry_event_type_layout"
-                android:layout_width="330dp"
+                android:layout_width="310dp"
                 android:layout_height="50dp"
                 android:elevation="2dp"
                 android:background="@drawable/spinner_dropdown"
@@ -42,7 +38,7 @@
                 app:boxCornerRadiusTopStart="20dp"
                 app:boxStrokeWidth="0dp"
                 app:boxStrokeWidthFocused="0dp"
-                app:startIconDrawable="@drawable/ic_baseline_groups_24"
+                app:startIconDrawable="@drawable/ic_baseline_organizer_24"
                 app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
                 app:endIconTint="@color/black"
                 android:hint="Event Type"
@@ -60,10 +56,16 @@
                     android:id="@+id/data_entry_event_type"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@null"
+                    android:dropDownSelector="@drawable/spinner_dropdown"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:singleLine="true"
                     android:inputType="none"
                     android:fontFamily="@font/montserrat_regular"
                     android:textColor="@color/black"
-                    android:gravity="center"
                     >
                 </AutoCompleteTextView>
 
@@ -75,6 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
+            android:layout_marginTop="10dp"
             android:orientation="vertical"
             android:gravity="center"
             >
@@ -82,8 +85,20 @@
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:id="@+id/data_entry_event_name_layout"
-                android:layout_width="250dp"
-                android:layout_height="60dp"
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+                android:elevation="2dp"
+                android:background="@drawable/spinner_dropdown"
+                app:boxBackgroundColor="@color/light_white"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:startIconDrawable="@drawable/ic_baseline_emoji_events_24"
+                app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+                app:endIconTint="@color/black"
                 android:hint="Event Name"
                 android:enabled="true"
                 android:textColorHint="@color/black"
@@ -99,10 +114,16 @@
                     android:id="@+id/data_entry_event_name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@null"
+                    android:dropDownSelector="@drawable/spinner_dropdown"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:singleLine="true"
                     android:fontFamily="@font/montserrat_regular"
                     android:inputType="none"
                     android:textColor="@color/black"
-                    android:gravity="center"
                     >
                 </AutoCompleteTextView>
 
@@ -121,8 +142,8 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="250dp"
-                android:layout_height="60dp"
+                android:layout_width="310dp"
+                android:layout_height="55dp"
                 android:hint="Chest number"
                 android:enabled="true"
                 android:textColorHint="@color/black"
@@ -139,6 +160,10 @@
                     android:id="@+id/data_entry_chest_number"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:drawableStart="@drawable/baseline_sports_score_24"
+                    android:drawablePadding="20dp"
+                    android:elevation="2dp"
+                    android:background="@drawable/rounded_corner"
                     android:fontFamily="@font/montserrat_regular"
                     android:inputType="number"
                     android:maxLength="5"
@@ -161,8 +186,8 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="250dp"
-                android:layout_height="60dp"
+                android:layout_width="310dp"
+                android:layout_height="55dp"
                 android:hint="Player Name"
                 android:textColorHint="@color/black"
                 android:textCursorDrawable="@color/black"
@@ -176,6 +201,10 @@
                     android:id="@+id/data_entry_player_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_baseline_person_24"
+                    android:drawablePadding="20dp"
+                    android:elevation="2dp"
+                    android:background="@drawable/rounded_corner"
                     android:fontFamily="@font/montserrat_regular"
                     android:inputType="text"
                     />
@@ -191,13 +220,26 @@
             android:layout_height="0dp"
             android:layout_weight="2"
             android:orientation="vertical"
+            android:layout_marginTop="5dp"
             android:gravity="center"
             >
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="250dp"
-                android:layout_height="60dp"
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+                android:elevation="2dp"
+                android:background="@drawable/spinner_dropdown"
+                app:boxBackgroundColor="@color/light_white"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:startIconDrawable="@drawable/baseline_male_24"
+                app:endIconDrawable="@drawable/ic_baseline_arrow_drop_down_24"
+                app:endIconTint="@color/black"
                 android:hint="Gender"
                 android:enabled="true"
                 android:textColorHint="@color/black"
@@ -213,10 +255,17 @@
                     android:id="@+id/data_entry_gender"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@null"
+                    android:dropDownSelector="@drawable/spinner_dropdown"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:singleLine="true"
                     android:fontFamily="@font/montserrat_regular"
                     android:inputType="none"
                     android:textColor="@color/black"
-                    android:gravity="center"
+
                     >
                 </AutoCompleteTextView>
 
@@ -236,8 +285,8 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_gravity="center"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="250dp"
-                android:layout_height="60dp"
+                android:layout_width="260dp"
+                android:layout_height="55dp"
                 android:hint="D.O.B"
                 android:enabled="true"
                 android:textColorHint="@color/black"
@@ -245,13 +294,17 @@
                 app:boxStrokeColor="@color/black"
                 app:hintTextColor="@color/black"
                 app:startIconTint="@color/black"
-                android:layout_marginLeft="38dp"
+                android:layout_marginLeft="10dp"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/data_entry_dob"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:drawableStart="@drawable/ic_baseline_date_range_24"
+                    android:drawablePadding="20dp"
+                    android:elevation="2dp"
+                    android:background="@drawable/rounded_corner"
                     android:fontFamily="@font/montserrat_regular"
                     android:inputType="date"
                     android:textColor="@color/black"
@@ -266,75 +319,79 @@
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:backgroundTint="@color/white"
-                android:hint="DOB"
-                android:textColorHint="@color/black"
-                android:textSize="10sp"
+                android:drawableLeft="@drawable/ic_baseline_date_range_24"
                 android:fontFamily="@font/montserrat_regular"
                 app:cornerRadius="20dp"
-                app:strokeColor="@color/black"
-                app:strokeWidth="1dp"
                 >
             </Button>
 
         </LinearLayout>
 
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="2.5"
+            android:weightSum="3"
             android:orientation="vertical"
-            android:gravity="center"
+            android:layout_marginTop="20dp"
             >
 
-            <Button
-                android:id="@+id/data_entry_add_player"
-                android:layout_width="126dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/white"
-                android:text="add"
-                android:textColor="@color/black"
-                android:fontFamily="@font/montserrat_regular"
-                app:cornerRadius="20dp"
-                app:strokeColor="@color/black"
-                app:strokeWidth="1dp">
 
-            </Button>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:orientation="horizontal"
+                android:gravity="center"
+
+                >
+
+                <Button
+                    android:id="@+id/data_entry_add_player"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:elevation="5dp"
+                    android:stateListAnimator="@null"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/light_white"
+                    android:text="Add"
+                    android:layout_marginLeft="75dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_regular"
+                    app:cornerRadius="71dp"
+                    >
+
+                </Button>
+
+                <Button
+                    android:id="@+id/data_entry_finish"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:elevation="5dp"
+                    android:stateListAnimator="@null"
+                    android:backgroundTint="@color/light_white"
+                    android:text="Finish"
+                    android:layout_marginLeft="55dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_regular"
+                    app:cornerRadius="71dp"
+                    >
+
+                </Button>
+
+
+
+
+
+            </LinearLayout>
 
 
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-
-            <Button
-                android:id="@+id/data_entry_finish"
-                android:layout_width="126dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/white"
-                android:text="finish"
-                android:textColor="@color/black"
-                android:fontFamily="@font/montserrat_regular"
-                app:cornerRadius="20dp"
-                app:strokeColor="@color/black"
-                app:strokeWidth="1dp">
-
-            </Button>
-
-
-
-        </LinearLayout>
 
 
     </LinearLayout>
 
-</ScrollView>

@@ -7,56 +7,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Admin"
-    android:background="@drawable/background"
+    android:background="@drawable/adminbg"
 
     >
-    <LinearLayout
-        android:padding="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
 
-        >
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="66dp"
-            android:layout_gravity="center"
-            android:background="@drawable/hsports"
-            >
-        </ImageView>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="ADMIN"
-            android:textStyle="bold"
-            android:textSize="30sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/montserrat_regular"
-            android:gravity="center"
-            >
-        </TextView>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="Event Team"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:fontFamily="@font/montserrat_regular">
-        </TextView>
 
-    </LinearLayout>
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -65,22 +22,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="170dp">
 
 
         <androidx.cardview.widget.CardView
             android:id="@+id/activity_admin_call_room"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="71dp"
+            android:backgroundTint="@color/green_shade"
             android:layout_marginBottom="10dp"
             android:layout_gravity="center">
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="Call Room"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_height="50dp"
+                android:text="CALL ROOM"
+                android:textSize="20sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/montserrat_regular"
                 android:gravity="center">
@@ -91,8 +49,9 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/activity_admin_call_room_recycler_view"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 tools:listitem="@layout/card_view_" />
 
 
@@ -100,17 +59,17 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/activity_admin_referee"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="71dp"
+            android:backgroundTint="@color/green_shade"
             android:layout_marginBottom="10dp"
             android:layout_gravity="center">
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="Referee"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_height="50dp"
+                android:text="REFEREE"
+                android:textSize="20sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/montserrat_regular"
                 android:gravity="center">
@@ -120,8 +79,9 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/activity_admin_referee_recycler_view"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 tools:listitem="@layout/card_view_" />
 
 
@@ -130,16 +90,16 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/activity_admin_data_entry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="71dp"
+            android:backgroundTint="@color/green_shade"
             android:layout_gravity="center">
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="Data Entry"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_height="50dp"
+                android:text="DATA ENTRY"
+                android:textSize="20sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/montserrat_regular"
                 android:gravity="center">
@@ -149,8 +109,9 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/activity_admin_data_entry_recycler_view"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 tools:listitem="@layout/card_view_" />
 
 

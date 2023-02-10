@@ -11,4 +11,6 @@
     <color name="btn_green">#00BFA6</color>
     <color name="red">#FF0000</color>
     <color name="btn_blue">#4BF8D4</color>
+    <color name="green_shade">#88D2BC</color>
+
 </resources>
