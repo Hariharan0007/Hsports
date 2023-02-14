@@ -1,9 +1,9 @@
 package com.example.hsports;
 
-public class RefereeViewModel {
+public class ViewModel {
     String name;
 
-    public RefereeViewModel(String name) {
+    public ViewModel(String name) {
         this.name = name;
     }
 }
