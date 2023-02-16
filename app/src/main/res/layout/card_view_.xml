@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:text="Name"
+        android:fontFamily="@font/montserrat_regular"
         android:textSize="20sp"
         />
 </androidx.cardview.widget.CardView>
