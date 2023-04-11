@@ -141,6 +141,7 @@ public class DataEntry extends AppCompatActivity {
                 if(validate_inputs(s_event_type,s_event_name,s_chest_no,s_player_name,s_gender,s_dob)){
                     database.child(org).child(organizer).child(event).child("EVENT LIST").child(s_gender).child(s_event_type).child(s_event_name).child(s_chest_no).child("NAME").setValue(s_player_name);
                     database.child(org).child(organizer).child(event).child("EVENT LIST").child(s_gender).child(s_event_type).child(s_event_name).child(s_chest_no).child("DOB").setValue(s_dob);
+                    database.child(org).child(organizer).child(event).child("EVENT LIST").child(s_gender).child(s_event_type).child(s_event_name).child(s_chest_no).child("STATUS").setValue("WAITING");
                     event_name.setText("");
                     chest_number.setText("");
                     player_name.setText("");
